@@ -138,6 +138,8 @@ app.put("/expenses/:id", (req, res) => {
 });
 
 // Start server
-app.listen(3000, () => {
-    console.log("Serveri u nis");
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`Serveri u nis në portin ${PORT}`);
 });

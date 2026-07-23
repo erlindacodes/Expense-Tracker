@@ -6,8 +6,13 @@ function Dashboard({ total, monthlyTotal, budget }) {
 
   const remaining = safeBudget - safeTotal;
 
+  const usedPercent = safeBudget > 0
+    ? Math.min((safeTotal / safeBudget) * 100, 100)
+    : 0;
+
 
   return (
+
 
     <div className="dashboard">
 
@@ -15,19 +20,20 @@ function Dashboard({ total, monthlyTotal, budget }) {
       <div className="dashboard-card total-card">
 
         <span className="dashboard-icon">
-          💵
+          💰
         </span>
 
-        <h3>
-          Totali
-        </h3>
+        <div>
+          <h3>
+            Bilanci total
+          </h3>
 
-        <h2>
-          {safeTotal}€
-        </h2>
+          <h2>
+            €{safeTotal.toFixed(2)}
+          </h2>
+        </div>
 
       </div>
-
 
 
 
@@ -37,58 +43,92 @@ function Dashboard({ total, monthlyTotal, budget }) {
           📅
         </span>
 
-        <h3>
-          Ky muaj
-        </h3>
+        <div>
+          <h3>
+            Ky muaj
+          </h3>
 
-        <h2>
-          {safeMonthly}€
-        </h2>
+          <h2>
+            €{safeMonthly.toFixed(2)}
+          </h2>
+        </div>
 
       </div>
-
 
 
 
       <div className="dashboard-card budget-card">
 
         <span className="dashboard-icon">
-          💰
+          🎯
         </span>
 
-        <h3>
-          Buxheti
-        </h3>
+        <div>
+          <h3>
+            Buxheti
+          </h3>
 
-        <h2>
-          {safeBudget}€
-        </h2>
+          <h2>
+            €{safeBudget.toFixed(2)}
+          </h2>
+        </div>
 
       </div>
 
 
 
-
-      <div 
-        className={`dashboard-card remaining-card ${
-          remaining < 0 ? "danger" : ""
-        }`}
-      >
+      <div className={`dashboard-card remaining-card ${
+        remaining < 0 ? "danger" : ""
+      }`}>
 
         <span className="dashboard-icon">
           💸
         </span>
 
-        <h3>
-          Mbetur
-        </h3>
+        <div>
 
-        <h2>
-          {remaining}€
-        </h2>
+          <h3>
+            Mbetur
+          </h3>
+
+          <h2>
+            €{remaining.toFixed(2)}
+          </h2>
+
+        </div>
 
       </div>
 
+
+
+      <div className="budget-progress">
+
+        <div className="progress-header">
+
+          <span>
+            Përdorimi i buxhetit
+          </span>
+
+          <strong>
+            {usedPercent.toFixed(0)}%
+          </strong>
+
+        </div>
+
+
+        <div className="progress-bar">
+
+          <div
+            className="progress-fill"
+            style={{
+              width: `${usedPercent}%`
+            }}
+          ></div>
+
+        </div>
+
+
+      </div>
 
 
 
@@ -97,7 +137,7 @@ function Dashboard({ total, monthlyTotal, budget }) {
 
         <div className="warning">
 
-          ⚠️ Ke kaluar buxhetin me {Math.abs(remaining)}€
+          ⚠️ Ke kaluar buxhetin me €{Math.abs(remaining).toFixed(2)}
 
         </div>
 
