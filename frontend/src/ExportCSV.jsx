@@ -125,5 +125,3 @@ function ExportCSV({ expenses }) {
 
 }
 
-
-export default ExportCSV;

@@ -15,6 +15,9 @@ Me këtë aplikacion përdoruesi mund të shtojë, ndryshojë, fshijë dhe filtr
 - 🌙 Dark mode
 - 📱 Dizajn responsive për telefon dhe desktop
 
+## 📸 Screenshot
+
+![Expense Tracker](screenshot.png)
 ## 🛠️ Technologies
 
 ### Frontend
