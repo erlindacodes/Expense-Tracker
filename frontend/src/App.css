@@ -1,0 +1,1565 @@
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#f1f5f9;
+  transition:0.3s;
+}
+
+
+.container {
+  width: 700px;
+  margin: 40px auto;
+}
+
+
+h1 {
+  text-align: center;
+  color: #1e293b;
+}
+
+
+h2 {
+  color: #334155;
+}
+
+
+h3 {
+  color: #475569;
+}
+
+
+.card {
+  background: white;
+  padding: 25px;
+  margin-top: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+
+
+input,
+select {
+
+  width: 95%;
+  padding: 12px;
+  margin: 8px 0;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+
+  font-size: 15px;
+
+}
+
+
+
+button {
+
+  padding: 10px 18px;
+  margin: 5px;
+
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 14px;
+
+}
+
+
+
+button:hover {
+
+  background: #1d4ed8;
+
+}
+
+
+
+p {
+
+  background: #f8fafc;
+
+  padding: 12px;
+
+  border-radius: 8px;
+
+  border-left: 5px solid #2563eb;
+
+}
+
+
+
+/* Statistika */
+
+.stats {
+
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 20px;
+
+}
+
+
+
+.stat-card {
+
+  background: white;
+
+  padding: 20px;
+
+  flex: 1;
+
+  border-radius: 12px;
+
+  text-align: center;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+}
+
+
+
+.stat-card p {
+
+  font-size: 25px;
+
+  font-weight: bold;
+
+  background: none;
+
+  border: none;
+
+}
+
+
+
+/* Grafiku */
+
+.chart-container {
+
+  width: 400px;
+
+  margin: 0 auto;
+
+  padding: 20px;
+
+}
+
+
+
+.chart-container h2 {
+
+  text-align: center;
+
+}
+
+
+
+/* Dark Mode */
+
+
+.dark{
+  background: #0f172a;
+
+  color: white;
+
+  min-height: 100vh;
+
+}
+
+
+
+.dark .card {
+
+  background: #1e293b;
+
+  color: white;
+
+}
+
+
+
+.dark h1,
+.dark h2,
+.dark h3 {
+
+  color: white;
+
+}
+
+
+
+.dark input,
+.dark select {
+
+  background: #334155;
+
+  color: white;
+
+  border-color: #475569;
+
+}
+
+
+
+.dark p {
+
+  color: white;
+
+}
+
+
+
+/* Telefon */
+
+@media (max-width: 700px) {
+
+
+  .container {
+
+    width: 90%;
+
+    margin: 20px auto;
+
+  }
+
+
+
+  .stats {
+
+    flex-direction: column;
+
+  }
+
+
+
+  .stat-card {
+
+    width: auto;
+
+  }
+
+
+
+  input,
+  select {
+
+    width: 90%;
+
+  }
+
+
+
+  button {
+
+    width: 90%;
+
+    display: block;
+
+    margin: 8px auto;
+
+  }
+
+
+
+  .chart-container {
+
+    width: 90%;
+
+  }
+
+
+
+  h1 {
+
+    font-size: 28px;
+
+  }
+
+
+}
+
+.expense-item {
+  animation: slideIn 0.4s ease;
+}
+
+
+@keyframes slideIn {
+
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+.warning {
+
+  background: #fee2e2;
+
+  color: #b91c1c;
+
+  padding: 15px;
+
+  border-radius: 12px;
+
+  margin-top: 20px;
+
+  text-align: center;
+
+  font-weight: bold;
+
+}
+.danger {
+
+  border: 2px solid red;
+
+}
+
+input,
+select {
+
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+
+  border-radius: 10px;
+
+  border: 1px solid #ddd;
+
+  font-size: 16px;
+
+}
+
+
+input:focus,
+select:focus {
+
+  outline: none;
+
+  border-color: #2563eb;
+
+}
+
+.chart-container {
+
+  background: white;
+
+  padding: 20px;
+
+  margin-top: 25px;
+
+  border-radius: 15px;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+
+.chart-container h2 {
+
+  text-align: center;
+
+  margin-bottom: 20px;
+
+}
+
+@media (max-width: 600px) {
+
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+
+  .card {
+    padding: 15px;
+  }
+
+
+  input,
+  select,
+  button {
+    font-size: 14px;
+  }
+
+
+  .chart-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+
+  h1 {
+    font-size: 28px;
+  }
+
+}
+
+.message {
+  background: #dcfce7;
+  color: #166534;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+/* 🌙 DARK MODE */
+
+.container.dark {
+  background: #111827;
+  color: white;
+  min-height: 100vh;
+}
+
+
+/* Titujt dhe tekstet */
+
+.container.dark h1,
+.container.dark h2,
+.container.dark h3,
+.container.dark p {
+  color: white;
+}
+
+
+/* Kartelat kryesore */
+
+.container.dark .card,
+.container.dark .dashboard-card,
+.container.dark .stat-card,
+.container.dark .chart-container {
+  background: #1f2937 !important;
+  color: white !important;
+  border-color: #374151;
+}
+
+
+/* Statistics */
+
+.container.dark .stats .stat-card h3,
+.container.dark .stats .stat-card p {
+  color: white !important;
+}
+
+
+/* Dashboard */
+
+.container.dark .dashboard-card h2,
+.container.dark .dashboard-card h3 {
+  color: white !important;
+}
+
+
+/* Input dhe Select */
+
+.container.dark input,
+.container.dark select {
+  background: #374151;
+  color: white;
+  border: 1px solid #4b5563;
+}
+
+
+/* Placeholder */
+
+.container.dark input::placeholder {
+  color: #d1d5db;
+}
+
+
+/* Buttons */
+
+.container.dark button {
+  background: #2563eb;
+  color: white;
+  border: none;
+}
+
+
+/* Warning */
+
+.container.dark .warning {
+  background: #3f1d1d;
+  color: #fecaca;
+}
+
+
+/* Kur kalohet buxheti */
+
+.container.dark .danger {
+  border: 2px solid #ef4444;
+  background: #1f2937 !important;
+}
+
+
+/* Grafiku */
+
+.container.dark .chart-container h2 {
+  color: white;
+}
+
+/* 📱 RESPONSIVE DESIGN */
+
+* {
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+.container {
+  width: 100%;
+  max-width: 100%;
+}
+
+
+/* Grafiku mos të dalë jashtë */
+
+canvas {
+  max-width: 100% !important;
+}
+
+
+/* 📱 Telefona dhe tableta */
+
+@media (max-width: 768px) {
+
+
+  .container {
+    padding: 10px;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+
+  h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+
+  /* Dashboard */
+
+  .dashboard {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+
+  .dashboard-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+  /* Statistics */
+
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+
+  .stat-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+  /* Kartelat */
+
+  .card,
+  .chart-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+  /* Inputet */
+
+  input,
+  select,
+  button {
+
+    width: 100%;
+    margin: 5px 0;
+
+  }
+
+
+  /* Grafiku */
+
+  .chart-container {
+    overflow: hidden;
+  }
+
+
+}
+
+
+/* 📱 Telefona të vegjël */
+
+@media (max-width: 400px) {
+
+
+  h1 {
+    font-size: 24px;
+  }
+
+
+  h2 {
+    font-size: 20px;
+  }
+
+
+  h3 {
+    font-size: 18px;
+  }
+
+
+  button {
+    font-size: 14px;
+  }
+
+}
+.expense-card {
+  background: white;
+  border-radius: 18px;
+  padding: 20px;
+  margin-top: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  transition: transform 0.2s;
+}
+
+.expense-card:hover {
+  transform: translateY(-3px);
+}
+
+
+.expense-category {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+.expense-card h3 {
+  margin: 5px 0;
+  font-size: 22px;
+}
+
+
+.expense-card h2 {
+  margin: 5px 0;
+  font-size: 28px;
+}
+
+
+.expense-card p {
+  color: #555;
+  margin-top: 10px;
+}
+
+
+.expense-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+
+.expense-buttons button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 15px;
+}
+.dark .expense-card {
+  background: #1e293b;
+  color: white;
+}
+
+
+.dark .expense-card p {
+  background: transparent;
+  color: #e2e8f0;
+}
+
+
+.dark .expense-category {
+  color: white;
+}
+
+
+.dark .expense-card h3,
+.dark .expense-card h2 {
+  color: white;
+}
+
+.dark .expense-card,
+.dark .monthly-report,
+.dark .dashboard,
+.dark .statistics,
+.dark .budget {
+  background: #1e293b;
+  color: white;
+}
+
+
+.dark .expense-card p,
+.dark .monthly-report p,
+.dark .dashboard p,
+.dark .statistics p,
+.dark .budget p {
+  color: white;
+  background: transparent;
+}
+.dark table {
+  background: #1e293b;
+  color: white;
+}
+
+
+.dark td,
+.dark th {
+  color: white;
+  border-color: #475569;
+}
+.container.dark .card {
+  background: #1e293b !important;
+  color: white !important;
+  border-color: #475569 !important;
+}
+
+.container.dark .card h2,
+.container.dark .card h3,
+.container.dark .card p {
+  color: white !important;
+}
+
+.container.dark .card p {
+  background: transparent !important;
+}
+/* Butonat e shpenzimeve */
+
+.expense-buttons button:first-child {
+  background: #3b82f6;
+  color: white;
+}
+
+.expense-buttons button:last-child {
+  background: #ef4444;
+  color: white;
+}
+
+
+.expense-buttons button:hover {
+  opacity: 0.85;
+  transform: scale(1.03);
+}
+
+
+.expense-buttons button {
+  transition: 0.2s;
+}
+.container.dark .expense-buttons button:first-child {
+  background: #2563eb;
+}
+
+.container.dark .expense-buttons button:last-child {
+  background: #dc2626;
+}
+@media (max-width:600px){
+
+  .dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+
+
+
+  h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+.card,
+.dashboard-card {
+  margin-bottom: 15px;
+}
+
+
+  input,
+select {
+  padding: 12px;
+  border-radius: 10px;
+}
+  button {
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+  .expense-buttons {
+    flex-direction: column;
+  }
+
+
+  .expense-card {
+    padding: 15px;
+  }
+
+
+  .expense-card h2 {
+    font-size: 24px;
+  }
+
+}
+
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.container.dark h1 {
+  color: white;
+}
+
+.subtitle {
+  color: #64748b;
+}
+.container.dark .subtitle {
+  color: #cbd5e1 !important;
+  background: transparent !important;
+}
+
+.total-card {
+  border-left: 6px solid #3b82f6;
+}
+
+
+.month-card {
+  border-left: 6px solid #8b5cf6;
+}
+
+
+.budget-card {
+  border-left: 6px solid #22c55e;
+}
+
+
+.remaining-card {
+  border-left: 6px solid #f59e0b;
+}
+
+
+.remaining-card.danger {
+  border-left: 6px solid #ef4444;
+}
+
+.dashboard-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  animation: fadeIn 0.5s ease;
+}
+
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.expense-card {
+  animation: fadeIn 0.4s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border:1px solid #e2e8f0;
+}
+
+.expense-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.container.dark .expense-card {
+  border:1px solid #374151;
+}
+
+@keyframes fadeIn {
+
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+.empty-state {
+  text-align: center;
+  padding: 30px;
+  margin-top: 20px;
+  border-radius: 15px;
+  background: #f8fafc;
+}
+
+
+.empty-state h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+
+.empty-state p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+.empty-state span {
+  color: #64748b;
+}
+.container.dark .empty-state {
+  background: #1e293b;
+}
+
+
+.container.dark .empty-state p {
+  color: white;
+}
+
+
+.container.dark .empty-state span {
+  color: #cbd5e1;
+}.container.dark .empty-state {
+  background: #1e293b;
+}
+
+
+.container.dark .empty-state p {
+  color: white;
+}
+
+
+.container.dark .empty-state span {
+  color: #cbd5e1;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+
+.filters input,
+.filters button {
+  flex: 1;
+  min-width: 150px;
+}
+
+.container.dark .filters {
+  background: transparent;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 18px;
+  margin-top: -15px;
+  margin-bottom: 30px;
+  color: #64748b;
+}
+
+
+.container.dark .subtitle {
+  color: #cbd5e1;
+}
+.subtitle {
+  text-align: center;
+  font-size: 18px;
+  margin-top: -15px;
+  margin-bottom: 30px;
+  color: #64748b;
+}
+
+
+.container.dark .subtitle {
+  color: #cbd5e1;
+}
+.filters select,
+.filters input {
+  background:white;
+}
+
+
+.container.dark .filters input,
+.container.dark .filters select {
+  background:#374151;
+  color:white;
+}
+.message {
+
+  position: fixed;
+
+  bottom: 25px;
+
+  right: 25px;
+
+  background: #22c55e;
+
+  color: white;
+
+  padding: 15px 22px;
+
+  border-radius: 12px;
+
+  font-weight: bold;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+
+  z-index: 9999;
+
+  animation: slideToast 0.4s ease;
+
+}
+
+
+@keyframes slideToast {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateX(80px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateX(0);
+
+  }
+
+}
+
+
+.container.dark .message {
+
+  background: #16a34a;
+
+}
+
+
+@keyframes slideMessage {
+
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+
+.add-btn {
+  width: 100%;
+  margin-top: 15px;
+
+  background: #22c55e;
+  color: white;
+
+  font-size: 17px;
+  font-weight: bold;
+
+  padding: 14px;
+
+  border-radius: 12px;
+
+  transition: 0.25s;
+}
+
+
+.add-btn:hover {
+  background: #16a34a;
+  transform: translateY(-2px);
+}
+
+
+.container.dark .add-btn {
+  background: #16a34a;
+}
+.cancel-btn {
+
+  width:100%;
+
+  background:#ef4444;
+
+  color:white;
+
+  margin-top:10px;
+
+}
+
+
+.cancel-btn:hover {
+
+  background:#dc2626;
+
+}
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 25px;
+}
+
+
+.dashboard-card {
+
+  background: white;
+
+  padding: 20px;
+
+  border-radius: 18px;
+
+  text-align: center;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+
+.dashboard-icon {
+
+  font-size: 35px;
+
+}
+
+
+.dashboard-card h3 {
+
+  margin: 10px 0;
+
+}
+
+
+.dashboard-card h2 {
+
+  font-size: 28px;
+
+}
+
+
+
+
+@media(max-width:768px){
+
+  .dashboard {
+
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+}
+
+
+
+@media(max-width:500px){
+
+  .dashboard {
+
+    grid-template-columns:1fr;
+
+  }
+
+}
+/* Expense cards sipas kategorisë */
+
+
+.expense-card {
+  border-left: 6px solid #2563eb;
+}
+
+
+
+/* Kategoritë */
+
+
+.expense-card.Ushqim {
+  border-left-color: #f97316;
+}
+
+
+.expense-card.Transport {
+  border-left-color: #3b82f6;
+}
+
+
+.expense-card.Shtëpi {
+  border-left-color: #22c55e;
+}
+
+
+.expense-card.Argëtim {
+  border-left-color: #a855f7;
+}
+
+
+.expense-card.Shëndet {
+  border-left-color: #ef4444;
+}
+
+
+.expense-card.Edukim {
+  border-left-color: #eab308;
+}
+
+
+.expense-card.Blerje {
+  border-left-color: #ec4899;
+}
+
+
+.expense-card.Tjera {
+  border-left-color: #64748b;
+}
+.expense-card {
+  animation: cardAppear 0.4s ease;
+}
+
+
+@keyframes cardAppear {
+
+  from {
+    opacity:0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity:1;
+    transform: translateY(0);
+  }
+
+}
+.stat-card {
+
+  transition: 0.3s;
+
+}
+
+
+.stat-card:hover {
+
+  transform: translateY(-5px);
+
+}
+
+
+.stat-icon {
+
+  font-size: 35px;
+
+  margin-bottom: 10px;
+
+}
+
+
+.stat-card h3 {
+
+  font-size: 16px;
+
+}
+
+
+.stat-card p {
+
+  font-size: 28px;
+
+  font-weight: bold;
+
+  color: #2563eb;
+
+}
+
+
+.container.dark .stat-card p {
+
+  color: #60a5fa;
+
+}
+.chart-container canvas {
+
+  max-height: 350px;
+
+}
+
+
+.chart-container {
+
+  text-align: center;
+
+}
+
+
+.container.dark .chart-container p {
+
+  background: transparent;
+
+}
+
+.chart-container canvas {
+
+  max-width: 100% !important;
+
+}
+
+
+@media(max-width:600px){
+
+  .chart-container h2 {
+
+    font-size: 20px;
+
+  }
+
+}
+.report-item {
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  padding:15px;
+
+  margin-top:10px;
+
+  background:#f8fafc;
+
+  border-radius:12px;
+
+  font-size:16px;
+
+}
+
+
+.report-item strong {
+
+  color:#2563eb;
+
+}
+
+
+.container.dark .report-item {
+
+  background:#334155;
+
+}
+
+
+.container.dark .report-item strong {
+
+  color:#60a5fa;
+
+}
+.export-btn {
+
+  background:#0ea5e9;
+
+  width:auto;
+
+}
+
+
+.export-btn:hover {
+
+  background:#0284c7;
+
+}
+
+
+.container.dark .export-btn {
+
+  background:#0284c7;
+
+}
+.splash-screen {
+
+  height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+
+}
+
+
+.splash-content {
+
+  text-align: center;
+
+  color: white;
+
+  animation: fadeSplash 1s ease;
+
+}
+
+
+.splash-content h1 {
+
+  font-size: 48px;
+
+  margin-bottom: 15px;
+
+}
+
+
+.splash-content p {
+
+  background: transparent;
+
+  border: none;
+
+  color: white;
+
+  font-size: 20px;
+
+}
+
+
+@keyframes fadeSplash {
+
+  from {
+
+    opacity: 0;
+
+    transform: scale(0.9);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+  }
+
+}
+.spinner {
+
+  width: 50px;
+
+  height: 50px;
+
+  margin: 25px auto;
+
+  border: 5px solid rgba(255,255,255,0.3);
+
+  border-top: 5px solid white;
+
+  border-radius: 50%;
+
+  animation: spin 1s linear infinite;
+
+}
+
+
+@keyframes spin {
+
+  from {
+
+    transform: rotate(0deg);
+
+  }
+
+  to {
+
+    transform: rotate(360deg);
+
+  }
+
+}
+.logo-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.logo-title img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 15px;
+  animation: logoPop 0.5s ease;
+}
+
+.logo-title h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+@keyframes logoPop {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
