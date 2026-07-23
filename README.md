@@ -31,17 +31,13 @@ Me këtë aplikacion përdoruesi mund të shtojë, ndryshojë, fshijë dhe filtr
 ## 📂 Project Structure
 
 ## ⚙️ Installation
-
-### Frontend
-
-```bash
-cd frontend
-npm install
-npm run dev
-
 cd backend
 npm install
 node server.js
+
+cd frontend
+npm install
+npm run devgit status
 
 ## 👩‍💻 Author
 
