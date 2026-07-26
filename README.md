@@ -54,3 +54,10 @@ https://expense-tracker-d5llisutk-erlindacodes1.vercel.app
 ---
 
 ## 📂 Project Structure
+
+---
+
+## ⚙️ Installation
+
+### 1. Clone repository
+
