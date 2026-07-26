@@ -1,47 +1,56 @@
 # 💰 Expense Tracker
 
-Një aplikacion full-stack për menaxhimin e shpenzimeve personale.
-Me këtë aplikacion përdoruesi mund të shtojë, ndryshojë, fshijë dhe filtrojë shpenzimet e tij, si dhe të kontrollojë statistikat mujore.
+Një aplikacion **full-stack** për menaxhimin e shpenzimeve personale.
+
+Expense Tracker lejon përdoruesin të regjistrojë, menaxhojë dhe analizojë shpenzimet e tij përmes një ndërfaqeje moderne dhe responsive.
+
+---
 
 ## 🚀 Features
 
-- ➕ Shtimi i shpenzimeve
-- ✏️ Editimi i shpenzimeve
-- 🗑️ Fshirja e shpenzimeve
-- 🔍 Kërkimi dhe filtrimi sipas kategorive
-- 📅 Filtrimi sipas datës dhe muajit
-- 📊 Grafika dhe statistika të shpenzimeve
-- 💰 Menaxhim i buxhetit
-- 🌙 Dark mode
-- 📱 Dizajn responsive për telefon dhe desktop
+✅ Shtimi i shpenzimeve  
+✅ Editimi i shpenzimeve  
+✅ Fshirja e shpenzimeve  
+✅ Kërkimi i shpenzimeve  
+✅ Filtrimi sipas kategorive  
+✅ Filtrimi sipas datës dhe muajit  
+✅ Dashboard me statistika  
+✅ Grafikë të shpenzimeve  
+✅ Menaxhim i buxhetit  
+✅ Përqindja e përdorimit të buxhetit  
+✅ Dark Mode  
+✅ Dizajn responsive për telefon dhe desktop  
+✅ Export i të dhënave CSV  
+
+---
 
 ## 📸 Screenshot
 
 ![Expense Tracker](screenshot.png)
+
+---
+
+## 🌐 Live Demo
+
+https://expense-tracker-d5llisutk-erlindacodes1.vercel.app
+
+---
+
 ## 🛠️ Technologies
 
 ### Frontend
+
 - React
 - Vite
 - CSS
 - Chart.js
 
 ### Backend
+
 - Node.js
 - Express.js
 - MySQL
 
+---
+
 ## 📂 Project Structure
-
-## ⚙️ Installation
-cd backend
-npm install
-node server.js
-
-cd frontend
-npm install
-npm run devgit status
-
-## 👩‍💻 Author
-
-Erlinda

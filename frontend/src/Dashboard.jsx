@@ -6,13 +6,8 @@ function Dashboard({ total, monthlyTotal, budget }) {
 
   const remaining = safeBudget - safeTotal;
 
-  const usedPercent = safeBudget > 0
-    ? Math.min((safeTotal / safeBudget) * 100, 100)
-    : 0;
-
 
   return (
-
 
     <div className="dashboard">
 
@@ -98,50 +93,6 @@ function Dashboard({ total, monthlyTotal, budget }) {
         </div>
 
       </div>
-
-
-
-      <div className="budget-progress">
-
-        <div className="progress-header">
-
-          <span>
-            Përdorimi i buxhetit
-          </span>
-
-          <strong>
-            {usedPercent.toFixed(0)}%
-          </strong>
-
-        </div>
-
-
-        <div className="progress-bar">
-
-          <div
-            className="progress-fill"
-            style={{
-              width: `${usedPercent}%`
-            }}
-          ></div>
-
-        </div>
-
-
-      </div>
-
-
-
-      {
-        remaining < 0 &&
-
-        <div className="warning">
-
-          ⚠️ Ke kaluar buxhetin me €{Math.abs(remaining).toFixed(2)}
-
-        </div>
-
-      }
 
 
     </div>

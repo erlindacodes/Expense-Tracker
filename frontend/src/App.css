@@ -29,14 +29,41 @@ h3 {
 
 
 .card {
-  background: white;
-  padding: 25px;
-  margin-top: 25px;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  background: #fff;
+  color: #222;
 }
 
+.dark .card {
+  background: #1e1e1e;
+  color: white;
+}
 
+.dark .card input {
+  background: #333;
+  color: white;
+  border-color: #555;
+}
+
+.dark .card h2 {
+  color: white;
+}
+.dark .card {
+  background: #1f2937;
+  color: white;
+}
+
+.dark .card input,
+.dark .card select {
+  background: #111827;
+  color: white;
+  border-color: #374151;
+}
+
+.dark .card p,
+.dark .card h2,
+.dark .card h3 {
+  color: white;
+}
 
 input,
 select {
@@ -1569,7 +1596,17 @@ h1 {
   border-radius: 15px;
   margin-top: 20px;
 }
+.container.dark .budget-progress {
+  background: #1f2937;
+  color: white;
+}
 
+.container.dark .budget-progress h2,
+.container.dark .budget-progress h3,
+.container.dark .budget-progress p {
+  color: white;
+  background: transparent;
+}
 .progress-header {
   display: flex;
   justify-content: space-between;
@@ -1587,6 +1624,13 @@ h1 {
   height: 100%;
   background: #6366f1;
   border-radius: 20px;
+}
+.container.dark .progress-bar {
+  background: #374151;
+}
+
+.container.dark .progress-fill {
+  background: #6366f1;
 }
 /* 🚀 New Dashboard Design */
 
@@ -1663,4 +1707,143 @@ h1 {
 
 .dashboard-card:hover {
   transform: translateY(-8px);
+}
+
+/* Fix Budget dark mode */
+.container.dark .budget p {
+  background: transparent !important;
+  color: white !important;
+  border-left-color: #6366f1;
+}
+
+.container.dark .budget {
+  background: #1f2937 !important;
+  color: white !important;
+}
+
+.container.dark .budget * {
+  color: white;
+}
+
+
+
+/* 💰 Budget Design */
+
+.budget {
+  margin-top: 20px;
+}
+
+
+.budget-info h3 {
+  margin: 12px 0;
+}
+
+
+.budget-progress {
+
+  width: 100%;
+  height: 14px;
+
+  background: #e5e7eb;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  margin-top: 20px;
+
+}
+
+
+.budget-progress-bar {
+
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    #22c55e,
+    #16a34a
+  );
+
+  border-radius: 20px;
+
+  transition: width 0.5s ease;
+
+}
+
+
+/* Kur kalon buxhetin */
+
+.danger-text {
+  color: #ef4444 !important;
+}
+
+
+/* Alert */
+
+.warning {
+
+  margin-top: 25px;
+
+  padding: 15px;
+
+  width: 100%;
+
+  text-align: center;
+
+  border-radius: 14px;
+
+  font-weight: bold;
+
+  background: #fee2e2;
+
+  color: #b91c1c;
+
+  border-left: 5px solid #ef4444;
+
+}
+
+
+/* Dark Mode */
+
+.container.dark .budget-progress {
+
+  background: #374151;
+
+}
+
+
+.container.dark .budget-progress-bar {
+
+  background: linear-gradient(
+    90deg,
+    #22c55e,
+    #4ade80
+  );
+
+}
+
+
+.container.dark .warning {
+
+  background: #431407;
+
+  color: #fed7aa;
+
+  border-left-color: #fb923c;
+
+}
+
+
+.container.dark .danger-text {
+
+  color: #f87171 !important;
+
+}
+.budget-progress {
+  margin-bottom: 20px;
+}
+
+.budget-warning {
+  margin-top: 15px !important;
 }
