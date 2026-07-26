@@ -1,26 +1,25 @@
 # 💰 Expense Tracker
 
-Një aplikacion **full-stack** për menaxhimin e shpenzimeve personale.
+Një aplikacion full-stack për menaxhimin e shpenzimeve personale.
 
-Expense Tracker lejon përdoruesin të regjistrojë, menaxhojë dhe analizojë shpenzimet e tij përmes një ndërfaqeje moderne dhe responsive.
+Me këtë aplikacion përdoruesi mund të shtojë, ndryshojë, fshijë dhe filtrojë shpenzimet e tij, si dhe të kontrollojë statistikat mujore dhe përdorimin e buxhetit.
 
 ---
 
 ## 🚀 Features
 
-✅ Shtimi i shpenzimeve  
-✅ Editimi i shpenzimeve  
-✅ Fshirja e shpenzimeve  
-✅ Kërkimi i shpenzimeve  
-✅ Filtrimi sipas kategorive  
-✅ Filtrimi sipas datës dhe muajit  
-✅ Dashboard me statistika  
-✅ Grafikë të shpenzimeve  
-✅ Menaxhim i buxhetit  
-✅ Përqindja e përdorimit të buxhetit  
-✅ Dark Mode  
-✅ Dizajn responsive për telefon dhe desktop  
-✅ Export i të dhënave CSV  
+➕ Shtimi i shpenzimeve  
+✏️ Editimi i shpenzimeve  
+🗑️ Fshirja e shpenzimeve  
+🔍 Kërkimi i shpenzimeve  
+📂 Filtrimi sipas kategorive  
+📅 Filtrimi sipas datës dhe muajit  
+📊 Grafika dhe statistika të shpenzimeve  
+💰 Menaxhim i buxhetit  
+📈 Përqindja e përdorimit të buxhetit  
+🌙 Dark Mode  
+📱 Dizajn responsive për telefon dhe desktop  
+📄 Export CSV  
 
 ---
 
@@ -30,23 +29,15 @@ Expense Tracker lejon përdoruesin të regjistrojë, menaxhojë dhe analizojë s
 
 ---
 
-## 🌐 Live Demo
-
-https://expense-tracker-d5llisutk-erlindacodes1.vercel.app
-
----
-
 ## 🛠️ Technologies
 
 ### Frontend
-
 - React
 - Vite
 - CSS
 - Chart.js
 
 ### Backend
-
 - Node.js
 - Express.js
 - MySQL
@@ -55,9 +46,13 @@ https://expense-tracker-d5llisutk-erlindacodes1.vercel.app
 
 ## 📂 Project Structure
 
----
-
 ## ⚙️ Installation
+🌐 Demo
 
-### 1. Clone repository
+Live version:
 
+https://expense-tracker-d5llisutk-erlindacodes1.vercel.app
+
+👩‍💻 Author
+
+Erlinda
